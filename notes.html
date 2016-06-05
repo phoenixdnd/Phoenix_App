@@ -1,0 +1,322 @@
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Phoenix</title>
+        <link rel="icon" href="images/favicon_16x16.gif" type="image/x-icon">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">        
+        <link rel="stylesheet" href="css/jquery-ui.min.css">        
+        <link rel="stylesheet" href="css/jquery-ui.theme.min.css">        
+        <link rel="stylesheet" href="css/global.css">        
+        <link rel="stylesheet" href="css/notes.css">        
+        
+        
+        <!--to support legacy browsers-->
+        <!-- [if lt IE 9]>
+            <script type="text/javascript" href="js/html5shiv.min.js"></script>
+            <script type="text/javascript" href="js/respond.min.js"></script>
+        <[endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.nav_button').click(function(){
+                    $('header nav').toggleClass('nav_toggle');
+                });
+                
+                
+                $('.tab-pane ul li button.glyphicon').click(function(){
+                    $(this).toggleClass('done');
+                    
+                });
+                
+                $('#category_dropdown li ul li').click(function(){
+                    var list_value = $(this).text();
+                    $('#category_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                });
+                
+            });
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <header class="cf">
+            <a href="index.html" title="phoenix logo">
+                <figure></figure>
+            </a>
+            <h1>Phoenix Developers <span>&amp;</span> Designers</h1>
+            <br>
+            
+            <button class="glyphicon glyphicon-menu-hamburger btn btn-default nav_button"></button>
+            
+            <nav>
+               <button class="btn btn-default nav_button">X</button>
+                <ul>
+                    <li><a href="add_students.html">Add Students</a></li>
+                    <li><a href="former_students.html">Former Students</a></li>
+                    <li><a href="fee_schedule.html">Fee Schedule</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        
+        <main class="container">
+            <div class="row">
+                <h2>Notes</h2>
+                <h3>Get Things Done</h3>
+            </div>
+            
+            <div class="container">
+               <header>
+                   <button data-target="#note_modal" data-toggle="modal">+</button>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#office" data-toggle="tab">Office (3)</a></li>
+                        <li><a href="#personal" data-toggle="tab">Personal (5)</a></li>
+                    </ul>
+                </header>
+                
+                <div class="filter_section">
+                    <ul>
+                        <li><span class="glyphicon glyphicon-filter"></span></li>
+                        <li class="active"><a href="#">All</a></li>
+                        <li><a href="#">Active</a></li>
+                        <li><a href="#">Finished</a></li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content">
+                   
+                    <div class="tab-pane fade in active" id="office">
+                        <ul>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <p>Things To Do In 2 Days</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time remaining"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <p>Things To Do In 2 Days</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time remaining"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <p>Things To Do In 2 Days</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time remaining"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <del>Things To Do In 2 Days</del>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <del>Things To Do In 2 Days</del>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <del>Things To Do In 2 Days</del>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="personal">
+                        
+                        <ul>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <p>Personal Thing to Do</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time remaining"></button> Today
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <p>Do Some Shit</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time remaining"></button> Today
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <p>Phoenix Advertising Video</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time remaining"></button> In 1 Day
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <del>Things To Do In 2 Days</del>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <del>Things To Do In 2 Days</del>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 task">
+                                        <del>Things To Do In 2 Days</del>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 task_time">
+                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                        </ul>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="modal fade" id="note_modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">Add Notes</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" class="form-horizontal">
+                                
+                                
+                                <div class="row">
+                                   <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="">Note</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-5">
+                                        <div class="form-group">
+                                            <label for="">Category</label>
+                                            <ul id="category_dropdown">
+                                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-arrow-down"></span> </a>
+
+                                                    <ul class="dropdown-menu">
+                                                        <li>Office</li>
+                                                        <li>Personal</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-push-2 col-sm-5">
+                                        <label for="">Due Date</label>
+                                        <input type="text" class="form-control" id="date_field">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row text-center">
+                                    <button type="submit" class="btn btn-default">Add Note</button>
+                                </div>
+                                
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        
+        
+        <footer class="cf">
+            <small>Copyright PHOENIX. All rights reserved.</small>
+            <a href="#">Create Backup</a>
+        </footer>
+        
+    </body>
+    
+</html>

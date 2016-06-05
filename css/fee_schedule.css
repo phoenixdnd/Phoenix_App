@@ -1,0 +1,294 @@
+body {
+    background-image: none;
+}
+
+main {
+    font-family: 'Ubuntu' , sans-serif;
+}
+
+main .row >h2 {
+    text-align: center;
+    color: #c40404;
+    margin-bottom: 3em;
+    font-family: 'Copperplate' , serif;
+}
+
+#search_section {
+    padding-left: 1.3em;
+}
+
+#search_section .form-group {
+    position: relative;
+}
+
+#search_section .form-group button.glyphicon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+#filter_section ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#filter_section ul li {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+#filter_section ul li a {
+    display: block;
+    padding: .3em .5em;
+    color: black;
+    font-weight: bold;
+}
+
+#filter_section ul li a:hover {
+    text-decoration: none;
+}
+
+#filter_section ul li.active a {
+    color: #c40404;
+    text-decoration: underline;
+}
+
+table {
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+table thead {
+    background-color: #333333;
+    color: white;
+    letter-spacing: .5px;
+    border-radius: 10px 10px 0 0;
+}
+
+table thead th {
+    border: none !important;
+}
+
+table thead tr {
+    border-radius: 10px 10px 0 0;
+}
+
+table thead tr th:first-of-type {
+    border-radius: 10px 0 0 0;
+}
+
+table thead tr th:last-of-type {
+    border-radius: 0 10px 0 0;
+}
+
+table tbody {
+    color: black;
+}
+
+table tr td {
+    border-top: none !important;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #999999;
+}
+
+table tbody tr:nth-of-type(odd) {
+    background-color: #cccccc;
+}
+
+table tbody tr:nth-of-type(odd) td {
+    border-right: 2px solid #999999 !important;
+}
+table tbody tr:nth-of-type(even) td {
+    border-right: 2px solid #ccc !important;
+}
+
+table thead th{
+    text-align: center;
+    border-right: 2px solid white !important;
+}
+
+table thead th:nth-of-type(5) ,
+table thead th:last-of-type ,
+table tbody tr:nth-of-type(even) td:nth-of-type(5) ,
+table tbody tr:nth-of-type(odd) td:nth-of-type(5) ,
+table tbody tr:nth-of-type(even) td:last-of-type ,
+table tbody tr:nth-of-type(odd) td:last-of-type
+{
+    border-right: none !important;
+}
+
+div.paid {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    margin: 0 auto;
+}
+
+div.unpaid {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #c40404;
+    margin: 0 auto;
+}
+
+table tbody tr td:last-of-type button.glyphicon {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+table tbody tr td:last-of-type button.glyphicon:active ,
+table tbody tr td:last-of-type button.glyphicon:focus {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    outline: 0;
+}
+
+table tbody tr td:last-of-type {
+    background-color: #333;
+    color: white;
+    padding: 0 1em;
+    position: relative;
+}
+
+table tbody tr td:last-of-type:hover button.glyphicon {
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+}
+
+main ol.pagination li a {
+    color: black;
+}
+
+main ol.pagination li.active_item a {
+    background-color: #c40404;
+    border: 1px solid #c9c9c9;
+    color: white;
+}
+
+main ol.pagination li.active_item a:visited ,
+main ol.pagination li.active_item a:hover ,
+main ol.pagination li.active_item a:active , {
+    background-color: #c40404;
+    border: 1px solid #c9c9c9;
+    color: white;
+}
+
+
+#setting_modal .modal-dialog {
+    margin-top: 10em;
+}
+
+#setting_modal .modal-header {
+    max-height: 60px;
+    line-height: 60px;
+    background-color: #222;
+    padding: 10px;
+}
+
+#setting_modal .modal-header h2 {
+    color: white;
+}
+
+#setting_modal .modal-header button.close {
+    color: white;
+    position: relative;
+    top: 15px;
+}
+
+#setting_modal .form-group {
+    padding: 0 1em;
+}
+
+#setting_modal .modal-body button ,
+#setting_modal .modal-body a.btn {
+    margin-top: .4em;
+    background-color: #222;
+    color: white;
+    border: 0;
+    padding: .5em 1.5em;
+}
+
+
+#student_status_dropdown ,
+#fee_status_dropdown {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+#student_status_dropdown > li > a ,
+#fee_status_dropdown > li > a {
+    display: block;
+    padding-left: 1em;
+    height: 2.5em;
+    line-height: 2.5em;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #d0cdcd;
+    text-decoration: none;
+    color: black;
+}
+
+#student_status_dropdown span.glyphicon ,
+#fee_status_dropdown span.glyphicon {
+    position: absolute;
+    right: 1em;
+    top: 1.2em;
+    font-size: .8em;
+    color: #4d4b4b;
+}
+
+#student_status_dropdown li ul ,
+#fee_status_dropdown li ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+#student_status_dropdown li ul li ,
+#fee_status_dropdown li ul li {
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+    cursor: pointer;
+}
+
+#student_status_dropdown li ul li:hover ,
+#fee_status_dropdown li ul li:hover {
+    background-color: #d6d6d6;
+}
+
+@media(max-width: 768px) {
+    
+    #search_section {
+        padding: 0 2em;
+    }
+    
+    #filter_section ul {
+        margin: 0 auto;
+        width: 20em;
+    }
+    
+}

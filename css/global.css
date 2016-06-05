@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'Copperplate';
+    src: url(../fonts/copperplate_gothic_bold.eot);
+    src: url(../fonts/copperplate_gothic_bold.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/copperplate_gothic_bold.woff2) format('woff2'),
+        url(../fonts/copperplate_gothic_bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/ubuntu-regular.eot);
+    src: url(../fonts/ubuntu-regular.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/ubuntu-regular.woff2) format('woff2'),
+        url(../fonts/ubuntu-regular.woff) format('woff');
+}
+
+
+body , html {
+    height: 100%;
+}
+
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Copperplate' , sans-serif;
+    background-image: url(../images/bgimg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+header {
+    text-align: center;
+    position: relative;
+}
+
+header button.glyphicon ,
+header button{
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    border: none;
+    font-size: 1.5em;
+    padding: .2em .2em;
+    background-color: transparent;
+}
+
+header nav button.glyphicon ,
+header nav button{
+    font-family: sans-serif;
+    font-weight: bold !important;
+    left: 2em;
+    color: white;
+    background-color: transparent !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.3em !important;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    background-image: url(../images/bgimg_white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    
+    -webkit-transform: translateX(100%);
+    
+    transform: translateX(-100%);
+    
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    
+    transition: -webkit-transform .5s ease-in-out;
+    
+    transition: transform .5s ease-in-out;
+    
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    
+    z-index: 1;
+}
+
+nav.nav_toggle {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+body > header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 2em;
+}
+
+body > header ul li {
+    margin-top: 2em;
+}
+
+
+body > header ul li a {
+    display: block;
+    padding: .5em;
+    color: #bab7b7;
+    font-size: 1.5em;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+body > header ul li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body > header button.glyphicon:hover ,
+body > header button.glyphicon:active ,
+body > header button.glyphicon:focus{
+    background-color: transparent !important;
+    outline: 0 !important;
+}
+
+
+body > header figure {
+    width: 160px;
+    height: 160px;
+    float: left;
+    background-image: url(../images/logo_sprite.png);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+body > header figure:hover {
+    background-position: 0 160px;
+}
+
+header h1 {
+    padding-right: 5em;
+}
+
+header h1 span {
+    color: #c40404;
+}
+
+main {
+    clear: both;
+    padding-bottom: 9em;
+/*    height: 100%;*/
+}
+
+main > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 5em;
+    margin-left: 7em;
+}
+
+main > ul li {
+    width: 15em;
+    margin-top: 2em;
+}
+
+main > ul li a {
+    display: block;
+    padding: 1.1em 2em;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    box-shadow: inset 0 0 15px 2px #bfbdbd,
+                2px 2px 10px 1px black;
+}
+
+main > ul li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #222;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+
+footer a {
+    float: right;
+    font-size: .8em;
+    margin-right: 2em;
+    color: gray;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: gray;
+}
+
+
+
+
+
+
+
+@media(max-width: 850px) {
+    body {
+        background-size: 35%;
+    }
+}
+
+
+@media(max-width : 767px) {
+    
+    body {
+        background-image: none;
+        background-size: 40%;
+    }
+    
+    header h1 {
+        font-size: 2em;
+        text-align: center;
+        padding: 0;
+    }
+    
+    main ul {
+        margin-left: 0;
+    }
+    
+    main ul li {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    body > header figure {
+        float: none !important;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 550px){
+    
+    
+    header nav {
+        background-image: none;
+    }
+    
+    header nav ul {
+        float: none;
+        left: 0;
+    }
+    
+    header h1 {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    
+    main ul{
+        margin: 0;
+        margin-top: 3em;
+    }
+    
+    
+}
+
+
+
+
+
+.cf:before ,
+.cf:after {
+    content: ' ';
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+} 

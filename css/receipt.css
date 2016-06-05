@@ -1,0 +1,65 @@
+.table {
+    display: inline-table;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.table_row {
+    display: table-row;
+}
+
+.table_col {
+    display: table-cell;
+}
+
+
+
+.value {
+    border-bottom: 2px solid #222;
+/*    text-align: center;*/
+}
+
+
+.thankyou_section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.thankyou_section h2 {
+    font-size: 2.5em;
+    color: #c40404;
+    margin: 0;
+}
+
+.thankyou_section h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.thankyou_section h3:last-of-type {
+    font-size: 1em;
+}
+
+#terms h2 {
+    margin-left: 20px;
+    color: #c40404;
+}
+
+#terms ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+@media(max-width: 768px) {
+    .table {
+        width: 330px;
+    }
+    
+    #terms {
+        margin: 30px 0 0 0;
+    }
+    
+    #terms ul {
+        padding: 0 10px 0 20px;
+    }
+}

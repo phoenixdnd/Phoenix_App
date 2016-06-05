@@ -1,0 +1,232 @@
+body {
+    background-image: none;
+}
+
+main {
+    font-family: 'Ubuntu' , sans-serif;
+}
+
+main h2 ,
+main h3 {
+    font-family: 'Copperplate' , sans-serif;
+}
+
+main h2 {
+    margin-top: 0;
+    color: #c40404;
+    text-align: center;
+}
+
+main h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+main .container {
+    margin-top: 3em;
+}
+
+main .container header {
+    position: relative;
+    background-color: #222;
+    border-radius: 8px 8px 0 0;
+}
+
+main .container header > button {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: .8em;
+}
+
+main .container header > button:active , 
+main .container header > button:focus {
+    outline: 0 !important;
+}
+
+#category_dropdown {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+#category_dropdown > li > a{
+    display: block;
+    padding-left: 1em;
+    height: 2.5em;
+    line-height: 2.5em;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #d0cdcd;
+    text-decoration: none;
+    color: black;
+}
+
+#category_dropdown span.glyphicon {
+    position: absolute;
+    right: 1em;
+    top: 1.2em;
+    font-size: .8em;
+    color: #4d4b4b;
+}
+
+#category_dropdown li ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+#category_dropdown li ul li {
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+    cursor: pointer;
+}
+
+#category_dropdown li ul li:hover {
+    background-color: #d6d6d6;
+}
+
+#note_modal .modal-dialog {
+    margin-top: 8em;
+}
+
+#note_modal .modal-header {
+    background-color: #222;
+}
+
+#note_modal .modal-header h2 {
+    color: white;
+    text-align: left;
+    font-size: 1.6em;
+}
+
+#note_modal .modal-header button {
+    color: white;
+    position: relative;
+    top: 5px;
+}
+#note_modal form .form-group {
+    padding: 0 1em;
+}
+
+#note_modal form button[type="submit"] {
+    background-color: #222;
+    color: white;
+    border: 0;
+}
+
+main ul.nav-tabs {
+    width: 350px;
+    font-size: 1em;
+    margin: 0 auto;
+    border: none !important; 
+}
+
+main ul.nav-tabs li a ,
+main ul.nav-tabs li a:hover ,
+main ul.nav-tabs li a:active{
+    color: white;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+main ul.nav-tabs li.active a ,
+main ul.nav-tabs li.active a:hover ,
+main ul.nav-tabs li.active a:active ,
+main ul.nav-tabs li.active a:focus {
+    border: none !important;
+    background-color: transparent !important;
+    color: red !important;
+    text-decoration: underline;
+    letter-spacing: .5px;
+}
+
+
+.filter_section {
+    background-color: #f4f4f4;
+}
+
+.filter_section ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.filter_section ul li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.filter_section ul li a {
+    display: block;
+    padding: .2em 1em;
+    color: #222;
+}
+
+.filter_section ul li a:hover {
+    text-decoration: none;
+}
+
+.filter_section ul li.active a {
+    color: #c40404;
+    text-decoration: underline;
+}
+
+.tab-pane ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tab-pane ul li {
+    border-top : 2px solid #9b9a9a;
+    padding: 10px;
+}
+
+.tab-pane ul li:nth-of-type(odd) {
+    background-color: #eaeaea;
+}
+
+.tab-pane ul li:nth-of-type(even) {
+    background-color: #dddddd;
+}
+
+.tab-pane ul li p {
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.tab-pane ul li del {
+    display: block;
+    height: 100%;
+    color: #6c6b6b;
+}
+
+.tab-pane ul li button.glyphicon {
+    background-color: transparent;
+    border: none;
+    color: #c40404;
+}
+
+.tab-pane ul li button.glyphicon.done {
+    color: green;
+}
+
+.task_time {
+    text-align: right;
+    padding-right: 2em;
+}
+
+
+
+@media(max-width: 768px) {
+    .task , .task_time {
+        text-align: center;
+    }
+}

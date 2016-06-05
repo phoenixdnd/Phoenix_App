@@ -1,0 +1,202 @@
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Phoenix</title>
+        <link rel="icon" href="images/favicon_16x16.gif" type="image/x-icon">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">        
+        <link rel="stylesheet" href="css/jquery-ui.min.css">        
+        <link rel="stylesheet" href="css/jquery-ui.theme.min.css">        
+        <link rel="stylesheet" href="css/global.css">        
+        <link rel="stylesheet" href="css/add_student.css">        
+        
+        <!--to support legacy browsers-->
+        <!-- [if lt IE 9]>
+            <script type="text/javascript" href="js/html5shiv.min.js"></script>
+            <script type="text/javascript" href="js/respond.min.js"></script>
+        <[endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.nav_button').click(function(){
+                    $('header nav').toggleClass('nav_toggle');
+                });
+                
+                $('#date_field').datepicker();
+                
+                $('#name_field').focusin(function(){
+                    $('#name_figure').css('background-position' , '0 40px');
+                });
+                
+                $('#name_field').focusout(function(){
+                    $('#name_figure').css('background-position' , '0 0');
+                });
+                
+                
+                $('#course_field').focusin(function(){
+                    $('#course_figure').css('background-position' , '-45px 40px');
+                });
+                
+                $('#course_field').focusout(function(){
+                    $('#course_figure').css('background-position' , '-45px 0');
+                });
+                
+                
+                $('#contact_field').focusin(function(){
+                    $('#contact_figure').css('background-position' , '-90px 40px');
+                });
+                
+                $('#contact_field').focusout(function(){
+                    $('#contact_figure').css('background-position' , '-90px 0');
+                });
+                
+                
+                $('#teacher_field').focusin(function(){
+                    $('#teacher_figure').css('background-position' , '-135px 40px');
+                });
+                
+                $('#teacher_field').focusout(function(){
+                    $('#teacher_figure').css('background-position' , '-135px 0');
+                });
+                
+                
+                $('#date_field').focusin(function(){
+                    $('#date_figure').css('background-position' , '-180px 40px');
+                });
+                
+                $('#date_field').focusout(function(){
+                    $('#date_figure').css('background-position' , '-180px 0');
+                });
+                
+                $('#status_field').focusin(function(){
+                    $('#status_figure').css('background-position' , '-225px 40px');
+                });
+                
+                $('#status_field').focusout(function(){
+                    $('#status_figure').css('background-position' , '-225px 0');
+                });
+                
+                
+            });
+        </script>
+        
+        
+    </head>
+    
+    <body>
+        
+        <header class="cf">
+            <a href="index.html" title="phoenix logo">
+                <figure></figure>
+            </a>
+            <h1>Phoenix Developers <span>&amp;</span> Designers</h1>
+            <br>
+            
+            <button class="glyphicon glyphicon-menu-hamburger btn btn-default nav_button"></button>
+            
+            <nav>
+               <button class="btn btn-default nav_button">X</button>
+                <ul>
+                    <li><a href="add_students.html">Add Students</a></li>
+                    <li><a href="former_students.html">Former Students</a></li>
+                    <li><a href="fee_schedule.html">Fee Schedule</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        
+        <main class="container">
+        
+            <form action="" class="form-horizontal">
+                
+                <div class="inner_container">
+                
+                    <div class="row">
+                        <h2 class="text-center"><span>Add Student</span></h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
+                            <div class="form-group">
+                               <figure id="name_figure"></figure>
+                                <input type="text" id="name_field" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-1 col-md-2">
+                            
+                        </div>
+                        <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
+                            <div class="form-group">
+                               <figure id="course_figure"></figure>
+                                <input type="text"  id="course_field" class="form-control" placeholder="Course">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
+                            <div class="form-group">
+                               <figure id="contact_figure"></figure>
+                                <input type="text"  id="contact_field" class="form-control" placeholder="Contact Number">
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-1 col-md-2">
+                            
+                        </div>
+                        <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
+                            <div class="form-group">
+                               <figure id="teacher_figure"></figure>
+                                <input type="text"  id="teacher_field" class="form-control" placeholder="Teacher">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
+                            <div class="form-group">
+                               <figure id="date_figure"></figure>
+                                <input type="text"  id="date_field" class="form-control" placeholder="Registration Date">
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-1 col-md-2">
+                            
+                        </div>
+                        <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
+                            <div class="form-group">
+                               <figure id="status_figure"></figure>
+                                <input type="text" id="status_field"  class="form-control" placeholder="Status">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button type="submit" class="btn btn-default">Add</button>
+                    </div>
+                
+                </div>
+                
+            </form>
+        
+        </main>
+        
+        
+        <footer class="cf">
+            <small>Copyright PHOENIX. All rights reserved.</small>
+            <a href="#">Create Backup</a>
+        </footer>
+        
+    </body>
+    
+</html>

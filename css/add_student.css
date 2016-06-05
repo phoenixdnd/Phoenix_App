@@ -1,0 +1,147 @@
+/*outer form color: #707070  */
+/*inner form color: #4c4c4c  */
+/*input focus sprite background color: #3d3d3d  */
+/*input fields background color: #666666  */
+
+body {
+    background-image: none;
+/*    font-size: 14px;*/
+}
+
+
+
+main {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -10%;
+    left: 0;
+    right: 0;
+}
+
+
+form {
+    background-color: #707070;
+    padding: 10px;
+    font-family: 'Ubuntu' ,sans-serif;
+    font-weight: bold;
+}
+
+form h2 {
+    color: #a2a1a1;
+}
+
+form h2 span {
+    border-bottom: 3px solid #a2a1a1;
+}
+
+.inner_container {
+    background-color: #4c4c4c;
+    padding: 1em 0;
+}
+
+.row {
+    margin-bottom: 2em;
+    margin: 1 auto;
+}
+
+
+div.form-group {
+    position: relative;
+}
+
+
+form input {
+    min-height: 40px;
+    border-radius: 0 !important;
+    background-color: #666666 !important;
+    border: 0 !important;
+    padding-left: 50px !important;
+    color: #cecccc !important;
+}
+
+
+form input:focus {
+    box-shadow: 0 0 15px #2f2f2f !important;
+    
+}
+
+/*css sprites styling starts here
+=====================================*/
+
+div.form-group figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 100%;
+    background-image: url(../images/icon_sprites.jpg);
+    
+    -webkit-transition: all .4s;
+    
+    transition: all .4s;
+}
+
+#name_figure {
+    background-position: 0 0;
+}
+
+#course_figure {
+    background-position: -45px 0;
+}
+
+#contact_figure {
+    background-position: -90px 0;
+}
+
+#teacher_figure {
+    background-position: -135px 0;
+}
+
+#date_figure {
+    background-position: -180px 0;
+}
+
+#status_figure {
+    background-position: -225px 0;
+}
+
+
+
+/*css sprites styling ends here
+=======================================*/
+
+form .inner_container .row:last-of-type {
+    text-align: center;
+}
+
+form button[type="submit"] {
+    background-color: #707070;
+    color: #222;;
+    border: none;
+    font-weight: bold;
+    padding: .7em 3em;
+}
+
+form button[type="submit"]:hover {
+    background-color: #5d5d5d;
+    color: black;
+}
+
+form button[type="submit"]:active , 
+form button[type="submit"]:focus {
+    background-color: #5d5d5d !important;
+    color: black !important;
+}
+
+
+@media(max-width: 768px) {
+    
+}
+
+
+@media(max-width: 320px) {
+    main {
+        margin-top: 5%;
+    }
+}

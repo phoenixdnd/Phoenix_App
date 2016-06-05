@@ -1,0 +1,282 @@
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Phoenix</title>
+        <link rel="icon" href="images/favicon_16x16.gif" type="image/x-icon">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">        
+        <link rel="stylesheet" href="css/jquery-ui.min.css">        
+        <link rel="stylesheet" href="css/jquery-ui.theme.min.css">        
+        <link rel="stylesheet" href="css/global.css">        
+        <link rel="stylesheet" href="css/fee_schedule.css">        
+        
+        <!--to support legacy browsers-->
+        <!-- [if lt IE 9]>
+            <script type="text/javascript" href="js/html5shiv.min.js"></script>
+            <script type="text/javascript" href="js/respond.min.js"></script>
+        <[endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.nav_button').click(function(){
+                    $('header nav').toggleClass('nav_toggle');
+                });
+                
+                $('#student_status_dropdown li ul li').click(function(){
+                    var list_value = $(this).text();
+                    $('#student_status_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                });
+                
+                $('#fee_status_dropdown li ul li').click(function(){
+                    var list_value = $(this).text();
+                    $('#fee_status_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                });
+                
+                $('#month_field').datepicker();
+                
+            });
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <header class="cf">
+            <a href="index.html" title="phoenix logo">
+                <figure></figure>
+            </a>
+            <h1>Phoenix Developers <span>&amp;</span> Designers</h1>
+            <br>
+            
+            <button class="glyphicon glyphicon-menu-hamburger btn btn-default nav_button"></button>
+            
+            <nav>
+               <button class="btn btn-default nav_button">X</button>
+                <ul>
+                    <li><a href="add_students.html">Add Students</a></li>
+                    <li><a href="former_students.html">Former Students</a></li>
+                    <li><a href="fee_schedule.html">Fee Schedule</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        
+        <main class="container">
+            <div class="row">
+                <h2>Fee Schedule</h2>
+            </div>
+            
+            <div class="row" id="search_section">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <form action="" class="form-horizontal">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button class="btn btn-default glyphicon glyphicon-search"></button>
+                        </div>
+                        <p>6 Results Found.</p>
+                    </form>
+                </div>
+                
+                <div class="col-xs-12 col-sm-push-2 col-sm-4 col-md-push-4 col-md-4" id="filter_section">
+                    <ul>
+                        <li><span class="glyphicon glyphicon-filter"></span></li>
+                        <li class="active"><a href="#">All</a></li>
+                        <li><a href="#">Paid</a></li>
+                        <li><a href="#">Unpaid</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="table-responsive">
+                <table class="table">
+                    
+                    <colgroup>
+                        <col id="name_col">
+                        <col id="course_col">
+                        <col id="month_col">
+                        <col id="student_status_col">
+                        <col id="fee_status_col">
+                        <col id="setting_col">
+                    </colgroup>
+                    
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Course</th>
+                            <th scope="col">Month</th>
+                            <th scope="col">Student Status</th>
+                            <th scope="col">Fee Status</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>StudentName</td>
+                            <td>Web Designing</td>
+                            <td>September</td>
+                            <td>Present</td>
+                            <td><div class="paid"></div></td>
+                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>StudentName</td>
+                            <td>Web Development</td>
+                            <td>September</td>
+                            <td>Present</td>
+                            <td><div class="unpaid"></div></td>
+                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>StudentName</td>
+                            <td>Web Designing</td>
+                            <td>September</td>
+                            <td>Present</td>
+                            <td><div class="paid"></div></td>
+                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>StudentName</td>
+                            <td>Web Designing</td>
+                            <td>September</td>
+                            <td>Present</td>
+                            <td><div class="unpaid"></div></td>
+                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td>StudentName</td>
+                            <td>Web Development</td>
+                            <td>September</td>
+                            <td>Present</td>
+                            <td><div class="paid"></div></td>
+                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>StudentName</td>
+                            <td>Web Development</td>
+                            <td>September</td>
+                            <td>Present</td>
+                            <td><div class="paid"></div></td>
+                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+            
+            
+            <ol class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active_item"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ol>
+            
+            
+            <div class="modal fade" id="setting_modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">Settings</h2>
+                        </div>
+                        <div class="modal-body">
+                            
+                            <form action="" class="form-horizontal">
+                                
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Course</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Month</label>
+                                            <input type="text" id="month_field" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Student Status</label>
+                                            <ul id="student_status_dropdown">
+                                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-arrow-down"></span> </a>
+
+                                                    <ul class="dropdown-menu">
+                                                        <li>Present</li>
+                                                        <li>Left</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Fee Status</label>
+                                            <ul id="fee_status_dropdown">
+                                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-arrow-down"></span> </a>
+
+                                                    <ul class="dropdown-menu">
+                                                        <li>Paid</li>
+                                                        <li>Unpaid</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 text-center">
+                                        <br>
+                                        <a href="#" class="btn btn-default">Make Receipt</a>
+                                        <button type="submit" class="btn btn-default">Update Record</button>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        
+        
+        <footer class="cf">
+            <small>Copyright PHOENIX. All rights reserved.</small>
+            <a href="#">Create Backup</a>
+        </footer>
+        
+    </body>
+    
+</html>
