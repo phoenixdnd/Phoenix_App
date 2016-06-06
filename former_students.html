@@ -47,11 +47,13 @@
                 $('#student_status_dropdown li ul li').click(function(){
                     var list_value = $(this).text();
                     $('#student_status_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                    $('#student_status_field').val(list_value);
                 });
                 
                 $('#fee_status_dropdown li ul li').click(function(){
                     var list_value = $(this).text();
                     $('#fee_status_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                    $('#fee_status_field').val(list_value);
                 });
                 
                 $('#month_field').datepicker();
@@ -235,6 +237,12 @@
                                                     </ul>
                                                 </li>
                                             </ul>
+                                            
+                                            <!--hidden field -->
+                                            
+                                            <input type="text" id="student_status_field"  name="fee_status">
+                                            
+                                            <!--hidden field -->
                                         </div>
                                     </div>
                                 </div>
@@ -252,6 +260,12 @@
                                                     </ul>
                                                 </li>
                                             </ul>
+                                            <!--hidden field -->
+                                            
+                                            <input type="text" id="fee_status_field"  name="fee_status">
+                                            
+                                            <!--hidden field -->
+                                            
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6 text-center">

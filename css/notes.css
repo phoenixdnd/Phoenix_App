@@ -90,6 +90,16 @@ main .container header > button:focus {
     background-color: #d6d6d6;
 }
 
+#category_field {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
 #note_modal .modal-dialog {
     margin-top: 8em;
 }
@@ -208,13 +218,19 @@ main ul.nav-tabs li.active a:focus {
     color: #6c6b6b;
 }
 
-.tab-pane ul li button.glyphicon {
+.tab-pane ul li a.glyphicon {
     background-color: transparent;
     border: none;
     color: #c40404;
 }
 
-.tab-pane ul li button.glyphicon.done {
+.tab-pane ul li a.glyphicon:hover,
+.tab-pane ul li a.glyphicon:active,
+.tab-pane ul li a.glyphicon:focus{
+    text-decoration: none;
+}
+
+.tab-pane ul li a.glyphicon.done {
     color: green;
 }
 

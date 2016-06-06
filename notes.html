@@ -33,7 +33,8 @@
                 });
                 
                 
-                $('.tab-pane ul li button.glyphicon').click(function(){
+                $('.tab-pane ul li a.glyphicon').click(function(evt){
+                    evt.preventDefault();
                     $(this).toggleClass('done');
                     
                 });
@@ -41,6 +42,7 @@
                 $('#category_dropdown li ul li').click(function(){
                     var list_value = $(this).text();
                     $('#category_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                    $('#category_field').val(list_value);
                 });
                 
             });
@@ -105,7 +107,7 @@
                                         <p>Things To Do In 2 Days</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time remaining"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time remaining"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -117,7 +119,7 @@
                                         <p>Things To Do In 2 Days</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time remaining"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time remaining"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -129,7 +131,7 @@
                                         <p>Things To Do In 2 Days</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time remaining"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time remaining"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -141,7 +143,7 @@
                                         <del>Things To Do In 2 Days</del>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time done"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -153,7 +155,7 @@
                                         <del>Things To Do In 2 Days</del>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time done"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -165,7 +167,7 @@
                                         <del>Things To Do In 2 Days</del>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time done"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -183,7 +185,7 @@
                                         <p>Personal Thing to Do</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time remaining"></button> Today
+                                        <a href="#" class="glyphicon glyphicon-time remaining"></a> Today
                                     </div>
                                 </div>
                             </li>
@@ -195,7 +197,7 @@
                                         <p>Do Some Shit</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time remaining"></button> Today
+                                        <a href="#" class="glyphicon glyphicon-time remaining"></a> Today
                                     </div>
                                 </div>
                             </li>
@@ -207,7 +209,7 @@
                                         <p>Phoenix Advertising Video</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time remaining"></button> In 1 Day
+                                        <a href="#" class="glyphicon glyphicon-time remaining"></a> In 1 Day
                                     </div>
                                 </div>
                             </li>
@@ -219,7 +221,7 @@
                                         <del>Things To Do In 2 Days</del>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time done"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -231,7 +233,7 @@
                                         <del>Things To Do In 2 Days</del>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time done"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -243,7 +245,7 @@
                                         <del>Things To Do In 2 Days</del>
                                     </div>
                                     <div class="col-xs-12 col-sm-4 task_time">
-                                        <button class="glyphicon glyphicon-time done"></button> In 2 Days
+                                        <a href="#" class="glyphicon glyphicon-time done"></a> In 2 Days
                                     </div>
                                 </div>
                             </li>
@@ -290,6 +292,11 @@
                                                     </ul>
                                                 </li>
                                             </ul>
+                                            
+                                            <!--hidden field-->
+                                                <input type="text" id="category_field" name="category_field">
+                                            <!--hidden field-->
+                                            
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-push-2 col-sm-5">
