@@ -22,6 +22,7 @@
         <[endif]-->
         
         <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         
         <script type="text/javascript">
@@ -41,15 +42,20 @@
                 });
                 
                 
-                $('#course_field').focusin(function(){
-                    $('#course_figure').css('background-position' , '-45px 40px');
+                $('#course_dropdown').focusin(function(){
+                    $('#course_figure').css('background-position' , '-45px 43px');
                 });
                 
-                $('#course_field').focusout(function(){
-                    $('#course_figure').css('background-position' , '-45px 0');
+                $('#course_dropdown').focusout(function(){
+                    $('#course_figure').css('background-position' , '-45px 3px');
                 });
                 
-                
+                $('#course_dropdown li ul li').click(function(){
+                    var list_value = $(this).text();
+                    $('#course_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                    $('#course_field').val(list_value);
+                });
+                                
                 $('#contact_field').focusin(function(){
                     $('#contact_figure').css('background-position' , '-90px 40px');
                 });
@@ -76,12 +82,18 @@
                     $('#date_figure').css('background-position' , '-180px 0');
                 });
                 
-                $('#status_field').focusin(function(){
-                    $('#status_figure').css('background-position' , '-225px 40px');
+                $('#status_dropdown').focusin(function(){
+                    $('#status_figure').css('background-position' , '-225px 45px');
                 });
                 
-                $('#status_field').focusout(function(){
-                    $('#status_figure').css('background-position' , '-225px 0');
+                $('#status_dropdown').focusout(function(){
+                    $('#status_figure').css('background-position' , '-225px 3px');
+                });
+                
+                $('#status_dropdown li ul li').click(function(){
+                    var list_value = $(this).text();
+                    $('#status_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                    $('#status_field').val(list_value);
                 });
                 
                 
@@ -136,9 +148,24 @@
                             
                         </div>
                         <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
-                            <div class="form-group">
+                            <div class="form-group special">
                                <figure id="course_figure"></figure>
-                                <input type="text"  id="course_field" class="form-control" placeholder="Course">
+                                <ul id="course_dropdown">
+                                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-arrow-down"></span>Course </a>
+
+                                                    <ul class="dropdown-menu">
+                                                        <li>Web Designing</li>
+                                                        <li>Web Development</li>
+                                                        <li>Laraval</li>
+                                                        <li>Desktop Application</li>
+                                                        <li>Advance Languages</li>
+                                                        <li>IELTS</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <!--hidden field-->
+                                            <input type="text" id="course_field" name="course">
+                                            <!--hidden field-->
                             </div>
                         </div>
                     </div>
@@ -174,9 +201,20 @@
                             
                         </div>
                         <div class="col-xs-9 col-xs-push-1 col-sm-4 col-md-4">
-                            <div class="form-group">
+                            <div class="form-group special">
                                <figure id="status_figure"></figure>
-                                <input type="text" id="status_field"  class="form-control" placeholder="Status">
+                                <ul id="status_dropdown">
+                                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-arrow-down"></span>Status </a>
+
+                                                    <ul class="dropdown-menu">
+                                                        <li>Paid</li>
+                                                        <li>Unpaid</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <!--hidden field-->
+                                            <input type="text" id="status_field" name="status">
+                                            <!--hidden field-->
                             </div>
                         </div>
                     </div>

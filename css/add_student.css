@@ -69,12 +69,17 @@ form input:focus {
 /*css sprites styling starts here
 =====================================*/
 
+div.form-group.special {
+    height: 45px;
+}
+
 div.form-group figure {
     position: absolute;
     top: 0;
     left: 0;
     width: 45px;
     height: 100%;
+    z-index: 1;
     background-image: url(../images/icon_sprites.jpg);
     
     -webkit-transition: all .4s;
@@ -82,12 +87,13 @@ div.form-group figure {
     transition: all .4s;
 }
 
+
 #name_figure {
     background-position: 0 0;
 }
 
 #course_figure {
-    background-position: -45px 0;
+    background-position: -45px 3px;
 }
 
 #contact_figure {
@@ -103,13 +109,76 @@ div.form-group figure {
 }
 
 #status_figure {
-    background-position: -225px 0;
+    background-position: -225px 3px;
 }
 
 
 
 /*css sprites styling ends here
 =======================================*/
+
+#course_dropdown ,
+#status_dropdown {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+#course_dropdown > li > a ,
+#status_dropdown > li > a {
+    display: block;
+    padding-left: 3.6em;
+    height: 45px;
+    line-height: 45px;
+    background-color: #666666;
+    color: #a5a5a5;
+    text-decoration: none;
+}
+
+#course_dropdown span.glyphicon ,
+#status_dropdown span.glyphicon {
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    font-size: .8em;
+    color: #cecccc;
+}
+
+#course_dropdown li ul ,
+#status_dropdown li ul {
+    width: 100%;
+    list-style: none;
+    background-color: #666666;
+    color: #cecccc;
+    padding: 0;
+}
+
+#course_dropdown li ul li ,
+#status_dropdown li ul li {
+    height: 2em;
+    line-height: 2em;
+    padding-left: .5em;
+    cursor: pointer;
+}
+
+#course_dropdown li ul li:hover ,
+#status_dropdown li ul li:hover {
+    background-color: #d6d6d6;
+    color: #666;
+}
+
+#course_field ,
+#status_field{
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;    
+}
+
 
 form .inner_container .row:last-of-type {
     text-align: center;

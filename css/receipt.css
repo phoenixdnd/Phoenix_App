@@ -1,3 +1,9 @@
+
+
+header a figure {
+    background-image: none;
+}
+
 .table {
     display: inline-table;
     width: 400px;
