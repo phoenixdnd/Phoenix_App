@@ -37,6 +37,12 @@
                     $('#student_status_field').val(list_value);
                 });
                 
+                $('#course_dropdown li ul li').click(function(){
+                    var list_value = $(this).text();
+                    $('#course_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
+                    $('#course_field').val(list_value);
+                });
+                
                 $('#fee_status_dropdown li ul li').click(function(){
                     var list_value = $(this).text();
                     $('#fee_status_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
@@ -130,7 +136,7 @@
                             <td>September</td>
                             <td>Present</td>
                             <td><div class="paid"></div></td>
-                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                            <td><button class="glyphicon glyphicon-trash btn btn-default" data-target="#delete_modal" data-toggle="modal"></button><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
                         </tr>
                         
                         <tr>
@@ -139,7 +145,7 @@
                             <td>September</td>
                             <td>Present</td>
                             <td><div class="unpaid"></div></td>
-                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                            <td><button class="glyphicon glyphicon-trash btn btn-default" data-target="#delete_modal" data-toggle="modal"></button><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
                         </tr>
                         
                         <tr>
@@ -148,7 +154,7 @@
                             <td>September</td>
                             <td>Present</td>
                             <td><div class="paid"></div></td>
-                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                            <td><button class="glyphicon glyphicon-trash btn btn-default" data-target="#delete_modal" data-toggle="modal"></button><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
                         </tr>
                         
                         <tr>
@@ -157,7 +163,7 @@
                             <td>September</td>
                             <td>Present</td>
                             <td><div class="unpaid"></div></td>
-                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                            <td><button class="glyphicon glyphicon-trash btn btn-default" data-target="#delete_modal" data-toggle="modal"></button><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
                         </tr>
                         
                         
@@ -167,7 +173,7 @@
                             <td>September</td>
                             <td>Present</td>
                             <td><div class="paid"></div></td>
-                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                            <td><button class="glyphicon glyphicon-trash btn btn-default" data-target="#delete_modal" data-toggle="modal"></button><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
                         </tr>
                         
                         <tr>
@@ -176,7 +182,7 @@
                             <td>September</td>
                             <td>Present</td>
                             <td><div class="paid"></div></td>
-                            <td><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
+                            <td><button class="glyphicon glyphicon-trash btn btn-default" data-target="#delete_modal" data-toggle="modal"></button><button class="glyphicon glyphicon-cog btn btn-default" data-target="#setting_modal" data-toggle="modal"></button></td>
                         </tr>
                     </tbody>
                     
@@ -214,7 +220,22 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label for="">Course</label>
-                                            <input type="text" class="form-control">
+                                            <ul id="course_dropdown">
+                                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-arrow-down"></span>Course </a>
+
+                                                    <ul class="dropdown-menu">
+                                                        <li>Web Designing</li>
+                                                        <li>Web Development</li>
+                                                        <li>Laraval</li>
+                                                        <li>Desktop Application</li>
+                                                        <li>Advance Languages</li>
+                                                        <li>IELTS</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <!--hidden field-->
+                                            <input type="text" id="course_field" name="course">
+                                            <!--hidden field-->
                                         </div>
                                     </div>
                                 </div>
@@ -279,6 +300,29 @@
                     </div>
                 </div>
             </div>
+            
+            
+            <div class="modal fade" id="delete_modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Delete Student</h3>
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Are Your Sure You Want To Delete This Student ?</h4>
+                            
+                            <div class="row text-right">
+                                <button class="btn btn-default">Yes</button>
+                                <button class="btn btn-default">No</button>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             
         </main>
         

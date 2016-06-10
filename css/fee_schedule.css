@@ -139,11 +139,11 @@ div.unpaid {
 
 table tbody tr td:last-of-type button.glyphicon {
     margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+/*    padding: 0;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
     min-height: 100%;
     border-radius: 0;
     border: 0;
@@ -168,11 +168,12 @@ table tbody tr td:last-of-type button.glyphicon:focus {
 table tbody tr td:last-of-type {
     background-color: #333;
     color: white;
+    width: 104px;
     padding: 0 1em;
     position: relative;
 }
 
-table tbody tr td:last-of-type:hover button.glyphicon {
+table tbody tr td:last-of-type button.glyphicon:last-of-type:hover {
     -webkit-transform: rotate(100deg);
     transform: rotate(100deg);
 }
@@ -236,6 +237,7 @@ main ol.pagination li.active_item a:active , {
 }
 
 #student_status_dropdown ,
+#course_dropdown ,
 #fee_status_dropdown {
     list-style: none;
     padding: 0;
@@ -243,6 +245,7 @@ main ol.pagination li.active_item a:active , {
 }
 
 #student_status_dropdown > li > a ,
+#course_dropdown > li > a ,
 #fee_status_dropdown > li > a {
     display: block;
     padding-left: 1em;
@@ -256,6 +259,7 @@ main ol.pagination li.active_item a:active , {
 }
 
 #student_status_dropdown span.glyphicon ,
+#course_dropdown span.glyphicon ,
 #fee_status_dropdown span.glyphicon {
     position: absolute;
     right: 1em;
@@ -265,6 +269,7 @@ main ol.pagination li.active_item a:active , {
 }
 
 #student_status_dropdown li ul ,
+#course_dropdown li ul ,
 #fee_status_dropdown li ul {
     width: 100%;
     list-style: none;
@@ -272,6 +277,7 @@ main ol.pagination li.active_item a:active , {
 }
 
 #student_status_dropdown li ul li ,
+#course_dropdown li ul li ,
 #fee_status_dropdown li ul li {
     height: 2em;
     line-height: 2em;
@@ -280,11 +286,13 @@ main ol.pagination li.active_item a:active , {
 }
 
 #student_status_dropdown li ul li:hover ,
+#course_dropdown li ul li:hover ,
 #fee_status_dropdown li ul li:hover {
     background-color: #d6d6d6;
 }
 
 #fee_status_field ,
+#course_field ,
 #student_status_field{
     width: 0;
     height: 0;
@@ -295,6 +303,56 @@ main ol.pagination li.active_item a:active , {
     opacity: 0;
     position: absolute;    
 }
+
+#delete_modal .modal-dialog {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-40% , -40%);
+    transform: translate(-40% , -40%);
+    
+}
+
+#delete_modal .modal-header {
+    background-color: #222;
+    color: white;
+    max-height: 60px;
+    line-height: 60px;
+}
+
+#delete_modal .modal-header h3.modal-title {
+    position: relative;
+    top: 3px;
+}
+
+#delete_modal .modal-header button.close {
+    position: relative;
+    top: -25px;
+    color: white;
+}
+
+
+#delete_modal .modal-body h4 {
+    font-size: 1.2em;
+}
+
+#delete_modal .row {
+    padding-right: 1em;
+}
+
+#delete_modal .row button {
+    border: 0;
+    background-color: #222;
+    color: white;
+}
+
+#delete_modal .row button:hover ,
+#delete_modal .row button:active ,
+#delete_modal .row button:focus {
+    background-color: #222;
+    color: white;
+}
+
 
 
 @media(max-width: 768px) {
