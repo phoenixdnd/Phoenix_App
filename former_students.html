@@ -44,6 +44,8 @@
                     $('header nav').toggleClass('nav_toggle');
                 });
                 
+                $('#registration_field').datepicker();
+                
                 $('#course_dropdown li ul li').click(function(){
                     var list_value = $(this).text();
                     $('#course_dropdown li a.dropdown-toggle').html(list_value + "<span class='glyphicon glyphicon-arrow-down'></span>");
@@ -268,6 +270,34 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <!--newly added fields code starts here
+                                ==========================================-->
+                                
+                                <!--newly added fields code starts here
+                                ======================================-->
+                                
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Registration Date</label>
+                                            <input type="text" id="registration_field" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="">Contact No.</label>
+                                            <input type="text" id="contact_field" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!--newly added field code ends here
+                                =======================================-->
+                                
+                                
+                                <!--newly added fields code ends here
+                                ===========================================-->
                                 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
